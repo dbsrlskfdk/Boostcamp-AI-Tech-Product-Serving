@@ -1,0 +1,34 @@
+[2023-07-12 08:36:35,113] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: bash_dag.print_date scheduled__2023-07-12T00:00:00+00:00 [queued]>
+[2023-07-12 08:36:35,119] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: bash_dag.print_date scheduled__2023-07-12T00:00:00+00:00 [queued]>
+[2023-07-12 08:36:35,119] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2023-07-12 08:36:35,119] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2023-07-12 08:36:35,119] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2023-07-12 08:36:35,132] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): print_date> on 2023-07-12 00:00:00+00:00
+[2023-07-12 08:36:35,134] {standard_task_runner.py:52} INFO - Started process 16352 to run task
+[2023-07-12 08:36:35,137] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'bash_dag', 'print_date', 'scheduled__2023-07-12T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', '/opt/ml/Boostcamp-AI-Tech-Product-Serving/yungi/airflow/dags/01-bash-operator.py', '--cfg-path', '/tmp/tmpl4e7tp5s', '--error-file', '/tmp/tmppirjsk77']
+[2023-07-12 08:36:35,138] {standard_task_runner.py:77} INFO - Job 2: Subtask print_date
+[2023-07-12 08:36:35,165] {logging_mixin.py:109} INFO - Running <TaskInstance: bash_dag.print_date scheduled__2023-07-12T00:00:00+00:00 [running]> on host 806bfd8722a2
+[2023-07-12 08:36:35,254] {logging_mixin.py:109} WARNING - /opt/conda/lib/python3.8/site-packages/airflow/models/xcom.py:322 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2023-07-12 08:36:35,260] {logging_mixin.py:109} WARNING - /opt/conda/lib/python3.8/site-packages/airflow/models/renderedtifields.py:126 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2023-07-12 08:36:35,269] {logging_mixin.py:109} WARNING - /opt/conda/lib/python3.8/site-packages/airflow/models/renderedtifields.py:162 SAWarning: Coercing Subquery object into a select() for use in IN(); please pass a select() construct explicitly
+[2023-07-12 08:36:35,271] {logging_mixin.py:109} WARNING - /opt/conda/lib/python3.8/site-packages/airflow/models/renderedtifields.py:159 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2023-07-12 08:36:35,275] {taskinstance.py:1412} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=yungi
+AIRFLOW_CTX_DAG_ID=bash_dag
+AIRFLOW_CTX_TASK_ID=print_date
+AIRFLOW_CTX_EXECUTION_DATE=2023-07-12T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-07-12T00:00:00+00:00
+[2023-07-12 08:36:35,275] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-07-12 08:36:35,276] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'date']
+[2023-07-12 08:36:35,281] {subprocess.py:85} INFO - Output:
+[2023-07-12 08:36:35,287] {subprocess.py:89} INFO - Wed Jul 12 08:36:35 UTC 2023
+[2023-07-12 08:36:35,287] {subprocess.py:93} INFO - Command exited with return code 0
+[2023-07-12 08:36:35,291] {logging_mixin.py:109} WARNING - /opt/conda/lib/python3.8/site-packages/airflow/models/xcom.py:102 SAWarning: TypeDecorator UtcDateTime(timezone=True) will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object's state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+[2023-07-12 08:36:35,303] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=bash_dag, task_id=print_date, execution_date=20230712T000000, start_date=20230712T083635, end_date=20230712T083635
+[2023-07-12 08:36:35,348] {local_task_job.py:154} INFO - Task exited with return code 0
+[2023-07-12 08:36:35,441] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2023-07-12 08:36:35,443] {logging_mixin.py:109} WARNING - /opt/conda/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.value() is deprecated and will be removed in a future release.  Please use Query.with_entities() in combination with Query.scalar() (deprecated since: 1.4)
+[2023-07-12 08:36:35,444] {logging_mixin.py:109} WARNING - /opt/conda/lib/python3.8/site-packages/airflow/models/dag.py:1069 SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
